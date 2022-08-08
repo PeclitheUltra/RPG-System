@@ -1,15 +1,13 @@
-using UnityEngine;
-
 public class BuffSpeed : Buff
 {
     private float _power;
 
-    public BuffSpeed(Stats stats, float length, float power) : base(stats, length)
+    public BuffSpeed(float length, float power) : base(length)
     {
         _power = power;
     }
 
-    public override void ChangeStats(Stats stats, bool forward)
+    protected override void ChangeStats(Stats stats, bool forward)
     {
         if (forward)
         {
