@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
     private Stats _stats;
     private AbilityCaster _caster;
     private PlayerMover _mover;
-    private BuffTarget _buffer;
+    //private BuffTarget _buffer;
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
             InputManager.Instance.Actions.Player.UseAbility3,
             InputManager.Instance.Actions.Player.UseAbility4
             );
-        _buffer = new BuffTarget();
+        new BuffSpeed(_stats, 5f, 3f);
     }
 
     private void Update()
